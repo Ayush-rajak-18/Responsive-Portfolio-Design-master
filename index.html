@@ -667,9 +667,7 @@
                     </div>
                 </div>
 
-               <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
-                <input type="hidden" name="access_key" value="2ebaea0b-b494-455f-bec8-53f0146c2307">
-            
+               <form >
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
@@ -753,30 +751,7 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="./packages/js/main.js"></script>
-                    
-<script>
-    function handleSubmit(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const form = event.target;
-        
-        // Perform the submission
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-        }).then(response => {
-            if (response.ok) {
-                alert('Thankyou! for your interest ');
-                form.reset(); // Reset the form after successful submission
-            } else {
-                alert('Form submission failed!');
-            }
-        }).catch(error => {
-            console.error('Form submission error:', error);
-            alert('An error occurred during form submission.');
-        });
-    }
-</script>
+
 </body>
 
 </html>
